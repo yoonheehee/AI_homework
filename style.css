@@ -1,0 +1,97 @@
+/* 전체 화면 중앙 정렬 및 배경색 */
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #f8f9fa;
+    font-family: 'Do Hyeon', sans-serif !important;
+    flex-direction: column;
+}
+
+.container {
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+h1 {
+    font-family: 'Do Hyeon', sans-serif;
+    font-weight: normal;
+    margin-bottom: 5px;
+    font-size: 3rem;
+    color: #333;
+}
+
+body, input, button {
+    font-family: 'Gowun Batang', serif;
+}
+
+.button {
+    font-size: 1em;
+    padding: 8px 16px;
+    margin: 3px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    color: white;
+    background-color: #6a5acd;
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.2s, box-shadow 0.2s;
+    box-shadow: 0 5px #574b90, inset 0 0 5px rgba(0, 0, 0, 0.5);
+}
+
+.button:hover {
+    background-color: #7f68d0;
+}
+.button:active {
+    transform: translateY(3px);
+    box-shadow: 0 2px #574b90, inset 0 0 5px rgba(0, 0, 0, 0.5);
+}
+
+h2 {
+    font-size: 1.5rem;
+    font-weight: normal;
+    color: #333;
+    margin-bottom: 8px;
+}
+
+.results {
+    margin-top: 10px;
+    font-size: 1em;
+    color: #333;
+}
+
+.map {
+    width: 100%;
+    height: 400px;
+    margin: 10px auto;
+}
+
+input[type="text"] {
+    padding: 8px;
+    margin: 8px 0;
+    width: 80%;
+    font-size: 1em;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.restaurant-button {
+    display: block;
+    width: 100%;
+    margin: 5px 0;
+    padding: 10px;
+    font-size: 1em;
+    background-color: #4e73df;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.restaurant-button:hover {
+    background-color: #375a7f;
+}
