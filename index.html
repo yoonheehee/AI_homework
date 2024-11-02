@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>저녁 메뉴 추천</title>
+    <link rel="stylesheet" href="style.css?v=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Do+Hyeon&family=Gowun+Batang&display=swap" rel="stylesheet">
+    <script type="text/javascript" src="https://dapi.kakao.com/v2/maps/sdk.js?appkey=YOUR_API_KEY&libraries=services"></script>
+    <script src="mapService.js?v=1.0" defer></script>
+    <script src="script.js?v=1.0" defer></script>
+</head>
+
+<body>
+    <div id="menuScreen" class="container">
+        <h1>저녁 메뉴 추천</h1>
+        <div class="button-container">
+            <button class="button korean" onclick="showRestaurantScreen('한식')">한식</button>
+            <button class="button chinese" onclick="showRestaurantScreen('중식')">중식</button>
+            <button class="button western" onclick="showRestaurantScreen('양식')">양식</button>
+            <button class="button japanese" onclick="showRestaurantScreen('일식')">일식</button>
+        </div>
+        <input type="text" id="locationInput" placeholder="지역을 입력해주세요! 입력하지 않으면 성남시청을 중심으로 설정됩니다 :)" />
+        <button onclick="setLocation()">위치 설정</button>
+    </div>
+
+    <div id="restaurantScreen" class="container hidden">
+        <h1>추천 음식점</h1>
+        <div id="results" class="results"></div>
+        <div id="map" class="map"></div>
+        <div class="nav-buttons">
+            <button class="back" onclick="goBack()">뒤로가기</button>
+            <button class="recommend" onclick="getNewRecommendations()">재추천</button>
+        </div>
+    </div>
+
+    <div id="infoScreen" class="container hidden">
+        <div id="info" class="info"></div>
+        <div id="mapInfo" class="info-map"></div>
+    </div>
+</body>
+</html>
